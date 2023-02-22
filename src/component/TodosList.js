@@ -1,12 +1,10 @@
 import TodoItem from './TodoItem';
 
-const TodosList = ({ todosProps, handleChange, delTodo, setUpdate }) => {
-    <ul>
+const TodosList = ({ todosProps, setTodos, delTodo }) => (
+  <ul>
     {todosProps.map((todo) => (
-      <TodoItem key={todo.id} itemProp={todo} setTodos={setTodos} delTodo={delTodo}
-      setUpdate={setUpdate}
-      />
+      <TodoItem key={todo.id} itemProp={todo} setTodos={setTodos} delTodo={delTodo} />
     ))}
   </ul>
-};
+);
 export default TodosList;
